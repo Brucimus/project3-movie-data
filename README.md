@@ -1,12 +1,12 @@
 # project3-movie-data
 
 authors: 
-    Jindal, Ekta
-    Chang, Bruce
-    Elmesallati, Haitham
-    Longo, Geraldine
-    Khatib, Rana
-    Corral, Daniel
+    Ekta Jindal,
+    Bruce Chang,
+    Haitham Elmesallati,
+    Geraldine Longo,
+    Rana Khatib,
+    Daniel Corral
     
     
 About the movie API
