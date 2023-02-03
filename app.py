@@ -1,22 +1,12 @@
-from flask import *
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return (
-        f"Welcome to the Hawaii Climate Analysis API!<br/>"
-        f"Available Routes:<br/>"
-        f"/api/v1.0/precipitation<br/>"
-        f"/api/v1.0/stations<br/>"
-        f"/api/v1.0/tobs<br/>"
-        f"/api/v1.0/temp/start<br/>"
-        f"/api/v1.0/temp/start/end<br/>"
-        f"<p>'start' and 'end' date should be in the format MMDDYYYY.</p>"
-
-    )
-    # return render_template('fview1.html')
-
+    return render_template('view1.html')
+if __name__ == '__main__':
+   app.run()
 # @app.route("/view2")
 # def view2():
 #     return render_template('view2.html')
