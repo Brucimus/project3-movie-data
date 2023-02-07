@@ -7,13 +7,13 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+    
 </head>
 <body>
     <h1>view1</h1>
     <button type="button" onclick="clickHandler()">
         Get Today!
     </button>
-  
     <script>
         function clickHandler() {
             alert(moment()
@@ -21,6 +21,12 @@
         }
     </script>
     <script src="logic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script>
+        console.log(' {{ data }} ');
+        console.log(' {{ data | tojson }} ');
+        // d3.csv("./tmdb_5000_movies.csv",function(data){
+        //     console.log(data); 
+        // });
+    </script>
 </body>
 </html>
