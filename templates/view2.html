@@ -6,9 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
 </head>
 <body>
     <h1>view2</h1>
-    <script src="logic.js"></script>
+    <button type="button" onclick="clickHandler()">
+        Get Today!
+    </button>
+  
+    <script>
+        function clickHandler() {
+            alert(moment()
+                .format('dddd, Do MMM YYYY, h:mm:ss A'))
+        }
+    </script>
+    <script src="./logic.js"></script>
 </body>
 </html>
