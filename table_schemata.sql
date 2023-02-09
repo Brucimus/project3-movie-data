@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS movies CASCADE;
 CREATE TABLE movies (
   title VARCHAR NOT NULL,
   budget INT NOT NULL,
+  genres VARCHAR NOT NULL,
   id SERIAL,
   original_language VARCHAR NOT NULL,
   original_title VARCHAR NOT NULL,
