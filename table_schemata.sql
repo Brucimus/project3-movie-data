@@ -19,16 +19,9 @@ CREATE TABLE movies (
   tagline VARCHAR NOT NULL,
   vote_average FLOAT,
   vote_count INT,
-	--set the id and the title columns as primary keys
-  PRIMARY KEY (id, title)
-);
-
---Drop credits table if it exists
-DROP TABLE IF EXISTS credits CASCADE;
---Create credits table
-CREATE TABLE credits (
-  title VARCHAR NOT NULL,
   movie_id SERIAL,
   actors VARCHAR NOT NULL,
   crew VARCHAR NOT NULL
+	--set the id and the title columns as primary keys
+  PRIMARY KEY (id, title)
 );
