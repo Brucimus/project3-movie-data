@@ -7,7 +7,7 @@ app = Flask(__name__, template_folder='./templates/', static_folder='./static')
 
 @app.route("/")
 def home():
-    df = pd.read_csv('../static/movie_data.csv')
+    df = pd.read_csv('./movie_data.csv')
     print(df.head())
     return render_template('view1.html', data=df.to_dict())
 
