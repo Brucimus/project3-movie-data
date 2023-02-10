@@ -1,7 +1,8 @@
-d3.csv("movie_data.csv",function(data){
-    console.log(data);
-},function(error, rows){
-   console.log(rows); 
-});
+// d3.json("http://localhost:5000/movies", function(data) {
+//     console.log(data);
+// })
 
-console.log("this")
+d3.json("http://localhost:5000/movies").then(function (data) {
+    // console.log("js")
+    console.log(data)
+  });
