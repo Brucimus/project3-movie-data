@@ -22,6 +22,4 @@ CREATE TABLE movies (
   movie_id SERIAL,
   actors VARCHAR NOT NULL,
   crew VARCHAR NOT NULL
-	--set the id and the title columns as primary keys
-  PRIMARY KEY (id, title)
 );
