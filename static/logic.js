@@ -1,9 +1,9 @@
-d3.csv("tmdb_5000_movies.csv",function(data){
-    console.log(data); 
-});
+// d3.csv("credits_data.csv").then(console.log("this"));
 
-// d3.csv("tmdb_5000_credits.csv",function(data2){
-//     console.log(data2); 
-// });
-
-// app.use("/static", express.static('./static/'));
+// function displayData (data){
+//     console.log(data);
+//     console.log("something");
+// }
+d3.json("http://localhost:5000/movies", function(data) {
+    console.log(data);
+})
