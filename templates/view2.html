@@ -8,6 +8,7 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="/node_modules/jsonrepair/lib/umd/jsonrepair.js"></script>
 </head>
 <body>
     <h1>View2</h1>
@@ -16,45 +17,41 @@
           <a class="nav-link" href="./">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="./view2">View2</a>
+          <a class="nav-link active" href="./view2">Revenue</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./view3">View3</a>
+          <a class="nav-link" href="./view3">Revenue Genre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./view4">Popularity</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./view5">Popularity Genre</a>
         </li>
       </ul>
       <div class="container">
         <div class="row">
           <div class="col-md-12 jumbotron text-center">
-            <h1>Movie Stuff</h1>
-            <p>Use the interactive charts below to explore the dataset</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2">
-            <div class="well">
-              <h5>Test Subject ID No.:</h5>
-              <select id="selDataset" onchange="optionChanged(this.value)"></select>
-            </div>
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Demographic Info</h3>
-              </div>
-              <div id="" class="panel-body"></div>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div id="bar"></div>
-          </div>
-          <div class="col-md-5">
-            <div id="gauge"></div>
+            <h1>Revenue</h1>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <div id="bubble"></div>
+            <div id="scatter1"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="scatter2"></div>
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="scatter3"></div>
+        </div>
+      </div>
+    </div>
     <button type="button" onclick="clickHandler()">
         Get Today!
     </button>

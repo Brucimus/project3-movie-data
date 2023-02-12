@@ -1,4 +1,4 @@
-d3.json("http://localhost:5000/genresrevenue").then(revenueComparisons)
+d3.json("http://localhost:5000/genrespopularity").then(popularityComparisons)
 
 // .then(function (data) {
 //     // console.log("js")
@@ -6,7 +6,7 @@ d3.json("http://localhost:5000/genresrevenue").then(revenueComparisons)
 //   });
 
 
-function revenueComparisons(data) {
+function popularityComparisons(data) {
     let genre = data.map(item => {return item[0]});
     let genreAvg = data.map(item => {return item[1]});
     let genreSum = data.map(item => {return item[2]});
@@ -22,7 +22,7 @@ function revenueComparisons(data) {
     var data = [trace1];
 
     var layout = {
-        title: 'Genre Revenue Percentage'
+        title: 'Genre Popularity Percentage'
     }
       
     Plotly.newPlot('pie', data, layout);
@@ -38,12 +38,12 @@ function revenueComparisons(data) {
     var data2 = [trace2];
 
     var layout2 = {
-        title: 'Revenue Average by Genre',
+        title: 'Popularity Average by Genre',
         xaxis: {
             title: 'Genre'
           },
           yaxis: {
-            title: 'Revenue (Avg)'
+            title: 'Popularity'
           }
     }
       
