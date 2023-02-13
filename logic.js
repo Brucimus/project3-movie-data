@@ -1,29 +1,43 @@
-// d3.csv("credits_data.csv").then(console.log("this"));
+const movieData = [];
+const titleArray = [];
+const revenueArray = [];
 
-// function displayData (data){
-//     console.log(data);
-//     console.log("something");
-// }
+const revenue = document.getElementById('revenueChart');
 
-// the below d3.json is wrong write
-// d3.json("http://localhost:5000/movies").then(function (data) {
-  // console.log("js")
-  // console.log(data)
-// });
+d3.csv("http://localhost:5000/data/movies1", (res) => movieData.push(res)).then(() => {
+  const limitArray = movieData.slice(0, 5);
+  console.log('Movie Data 1: ', limitArray);
 
-// if you wanna fetch data api, you should use d3.js or Papa.js third party js lib to help you convert csv file
-// because I am not unable run your app.py (cause of not had database information to connect)
+  for (let i = 0; i < limitArray.length; i++) {
+    titleArray.push(limitArray[i].title);
+    revenueArray.push(limitArray[i].revenue);
+  }
 
-// fetch('http://localhost:5000/data/movies1').then(async (res) => {
-//   const result = await res.json();
-//   var data = Papa.parse(result);
-//   console.log(data);
-// })
-
-var movieData = [];
-d3.csv("http://localhost:5000/data/movies1", (res) => { 
-  movieData.push(res) 
-}).then((res) => {
-  console.log(res)
-    console.log('Movie Data 1: ', movieData);
+  console.log(revenueArray);
+  revenueChart(titleArray, { data: revenueArray } )
 });
+
+function revenueChart (labelsArr, { data: data }) {
+  console.log(labelsArr);
+  new Chart(revenue, {
+    type: 'bar',
+    data: {
+      labels: labelsArr,
+      datasets: [{
+        label: 'Revenue of movies',
+        data: data,
+        borderWidth: 1,
+        borderColor: '#36A2EB',
+        backgroundColor: ['#1f77b4', '#ff7f0e', '#2ca02c', '#17becf', 'rgb(255, 99, 132, 0.4)']
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+}
