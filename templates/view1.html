@@ -59,6 +59,11 @@
           This tab looks at any correlation between different genres and popularity.
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="graph"></div>
+        </div>
+      </div>
     <button type="button" onclick="clickHandler()">
         Get Today!
     </button>
@@ -68,7 +73,7 @@
                 .format('dddd, Do MMM YYYY, h:mm:ss A'))
         }
     </script>
-    <!-- <script src="../static/logic.js"></script> -->
+    <script src="../static/logic.js"></script>
     <!-- <script>
         // console.log(' {{ data }} ');
         data = ' {{ data | tojson }} ';

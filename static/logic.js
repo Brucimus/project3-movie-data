@@ -16,10 +16,10 @@ function revenueComparisons(data) {
     let popularity = data.map(item => {return item[4]});
     let runtime = data.map(item => {return item[8]});
 
-    //Scatter plot 1
+    //Graph
     var trace1 = {
         x: revenue,
-        y: budget,
+        y: popularity,
         mode: 'markers',
         type: 'scatter'
       };
@@ -27,29 +27,7 @@ function revenueComparisons(data) {
     var data = [trace1];
 
     var layout = {
-        title: 'Budget to Revenue',
-        xaxis: {
-            title: 'Revenue (USD)'
-          },
-          yaxis: {
-            title: 'Budget (USD)'
-          }
-    }
-      
-    Plotly.newPlot('scatter1', data, layout);
-
-    //Scatter Plot 2
-    var trace2 = {
-        x: revenue,
-        y: popularity,
-        mode: 'markers',
-        type: 'scatter'
-      };
-      
-    var data2 = [trace2];
-
-    var layout2 = {
-        title: 'Popularity to Revenue',
+        title: 'Revenue to Popularity',
         xaxis: {
             title: 'Revenue (USD)'
           },
@@ -58,27 +36,5 @@ function revenueComparisons(data) {
           }
     }
       
-    Plotly.newPlot('scatter2', data2, layout2);
-
-    //Scatter Plot 3
-    var trace3 = {
-        x: revenue,
-        y: runtime,
-        mode: 'markers',
-        type: 'scatter'
-      };
-      
-    var data3 = [trace3];
-
-    var layout3 = {
-        title: 'Runtime to Revenue',
-        xaxis: {
-            title: 'Revenue (USD)'
-          },
-          yaxis: {
-            title: 'Runtime (min)'
-          }
-    }
-      
-    Plotly.newPlot('scatter3', data3, layout3);
+    Plotly.newPlot('graph', data, layout);
 }
