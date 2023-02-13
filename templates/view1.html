@@ -11,7 +11,6 @@
     
 </head>
 <body>
-    <h1>Home</h1>
     <ul class="nav nav-pills">
         <li class="nav-item">
           <a class="nav-link active" href="./">Home</a>
@@ -35,23 +34,31 @@
             <h1>Movie Stuff</h1>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div id="scatter1"></div>
-          </div>
+        <h3>
+          Revenue Summary
+        </h3>
+        <div>
+          This tab looks at how well budget, runtime, and vote averages correlate with revenue.
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div id="scatter2"></div>
-          </div>
+        <h3>
+          Revenue Genre Summary
+        </h3>
+        <div>
+          This tab looks at any correlation between different genres and revenue.
+        </div>
+        <h3>
+          Popularity Summary
+        </h3>
+        <div>
+          This tab looks at how well budget, runtime, and vote averages correlate with popularity.
+        </div>
+        <h3>
+          Popularity Genre Summary
+        </h3>
+        <div>
+          This tab looks at any correlation between different genres and popularity.
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div id="scatter3"></div>
-        </div>
-      </div>
-    </div>
     <button type="button" onclick="clickHandler()">
         Get Today!
     </button>
@@ -61,7 +68,7 @@
                 .format('dddd, Do MMM YYYY, h:mm:ss A'))
         }
     </script>
-    <script src="../static/logic.js"></script>
+    <!-- <script src="../static/logic.js"></script> -->
     <!-- <script>
         // console.log(' {{ data }} ');
         data = ' {{ data | tojson }} ';

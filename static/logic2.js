@@ -49,7 +49,7 @@ function revenueComparisons(data) {
     var data2 = [trace2];
 
     var layout2 = {
-        title: 'Popularity to Vote Average',
+        title: 'Revenue to Vote Average',
         xaxis: {
             title: 'Revenue (USD)'
           },
